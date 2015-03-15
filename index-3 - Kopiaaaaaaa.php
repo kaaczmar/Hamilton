@@ -11,7 +11,6 @@
 
 	
 	<link rel="stylesheet" type="text/css" href="css/style_css.css">
-	<link rel="stylesheet" type="text/css" href="css/form.css">
 	
 	<script type="text/javascript" language="JavaScript">
 function PokazAkapit()
@@ -54,11 +53,11 @@ function PokazAkapit()
 		<nav>
 			<div class="container">
 				<div class="wrapper">
-					<h1><strong>METODY OPTYMALIZACJI</strong></h1>
+					<h1><a href="index.html"><strong>METODY OPTYMALIZACJI</strong></a></h1>
 					<ul>
-						<li><a href="index.php">Wprowadzenie instancji problemu</a></li>
-						<li><bb>Uzupełnianie formularza</bb></li>
-						<li><bb class="current">Wyniki działania algorytmu</bb></li>
+						<li><a href="index.php" class="current">START</a></li>
+						<li><a href="index-1.html">METODA HAMILTONA - OPIS</a></li>
+						<li><a href="index-2.html">METODA HAMILTONA - IMPLEMENTACJA</a></li>
 
 					</ul>
 				</div>
@@ -67,8 +66,6 @@ function PokazAkapit()
 		
 	</header>
 	<div id="kontener">
-	
-	
 	
 		
 
@@ -113,7 +110,7 @@ function PokazAkapit()
 										if( $tablica_populacja[$zz] < 1)
 											{
 												$error = "tak";
-												 echo "<center><p style=\"color:red\">POPULACJA STANU ".($zz+1)." nie może być mniejsza od 1!</p><br>";
+												 echo "<p style=\"color:red\">POPULACJA STANU ".($zz+1)." nie może być mniejsza od 1!</p><br>";
 											}
 									}
 									if ($error == "tak") 
@@ -135,7 +132,7 @@ function PokazAkapit()
 										echo"<input type='hidden' name='liczba_stanow' value='$ILE' />";
 										echo"<input type='hidden' name='rozmiar_p' value='$rozmiar_parlamentu' />"; 
 										echo"<input type='submit' value='Wstecz' id='send' name='send' />";
-										echo"</form></center>";
+										echo"</form>";
 										
 										
 										
@@ -158,7 +155,7 @@ function PokazAkapit()
 								if($rozmiar_parlamentu < 1)
 										{
 											$error = "tak";
-											 echo "<center><p style=\"color:red\">ROZMIAR PARLAMENTU nie może być mniejszy od 1!</p><br>";
+											 echo "<p style=\"color:red\">ROZMIAR PARLAMENTU nie może być mniejszy od 1!</p><br>";
 										}
 								
 								$plik_tmp = $_FILES['plik']['tmp_name'];
@@ -210,7 +207,7 @@ function PokazAkapit()
 									   }
 									   if ($error == "tak") 
 									   {
-										echo "<br><p><a href=\"index.php\"><input type='button' value='Wstecz' id='powrot' name='powrot'></a></p></center>";
+										echo "<br><p><a href=\"index.php\"><input type='button' value='Wstecz' id='powrot' name='powrot'></a></p>";
 									   }
 								  
 							}
@@ -405,16 +402,7 @@ function PokazAkapit()
 	 <br>
     <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 	<br>
-	</fieldset>	
-	<br>
-	<br>
-	<p id="pow">
-	<powrot>
-	<a href="index.php"><input type="button" value="START MENU"/></a>
-	</powrot>
-	</p>
-	
-
+	</fieldset>		
 				
 		</center>
 		
