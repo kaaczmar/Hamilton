@@ -187,16 +187,29 @@ function PokazAkapit()
 											if( $ii > 0)
 												{
 
-												   $temp=explode(",",$dane[$ii]);
+
+												  // $temp=explode(" ",$dane[$ii]);
+												$temp = preg_split('/\s+/',$dane[$ii]); //wczytywanie stanów z pliku ze spacjami i tabulatorami
+																								
 												   for($k=0;$k<count($temp);$k++)
 													   {
 													   
 														$tablica_nazwa[$as] = "STAN ".($as+1)."";  //nazwy stanów
-														$tablica_populacja[$as] = $temp[$k];      //liczba populacji
-														$tablica_stan[$as] = 0;                  //zerowanie tablicy przydziału miejsc
-														$tablica_stan_flaga[$as] = 0;           //ustawienie flag przydziału pozostałych miejsc
-														$tablica_SQ[$as] = 0;				   //tablica kwot standardowych
-														$populacja_kraju = $populacja_kraju + $tablica_populacja[$as]; //wyliczenie populacji kraju (suma populacji stanów)
+														$tablica_populacja[$as] = trim($temp[$k]);      //liczba populacji
+														//usuwanie znaku końca lini
+														if($tablica_populacja[$as] == "")
+															{
+																$tablica_populacja[$as] = "NEW";
+																$as--;
+																
+															}
+															else
+															{
+																$tablica_stan[$as] = 0;                  //zerowanie tablicy przydziału miejsc
+																$tablica_stan_flaga[$as] = 0;           //ustawienie flag przydziału pozostałych miejsc
+																$tablica_SQ[$as] = 0;				   //tablica kwot standardowych
+																$populacja_kraju = $populacja_kraju + $tablica_populacja[$as]; //wyliczenie populacji kraju (suma populacji stanów)
+															}	
 														if( $tablica_populacja[$as] < 1)
 															{
 																$error = "tak";

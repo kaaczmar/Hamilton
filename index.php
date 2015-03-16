@@ -91,7 +91,7 @@ function PokazAkapit()
 				echo "<p><a href=\"#\" id=\"link\" onclick=\"PokazAkapit();\">INFORMACJA: FORMAT PLIKU</a></p><br>"; //ukrywanie działania algorytmu
 				echo "<div id='more' style='display:none;'>";//początek bloku do schowania
 				echo "W pierwszej linii liczba n oznaczająca liczbę stanów,";
-				echo "w drugiej linii n liczb rozdzielonych przecinkami,";
+				echo "w drugiej linii n liczb rozdzielonych spacjami bądź tabulatorami,";
 				echo "oznaczających populacje kolejnych stanów. Wszystkie liczby całkowite i mieszczące";
 				echo "się w 32-bitowym typie bez znaku, zapisane w systemie dziesiętnym.";
 					//Separator linii dowolny z trzech sensownych.";
