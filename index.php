@@ -69,9 +69,9 @@ function PokazAkapit()
 						echo"<legend><strong>Podaj ilość stanów biorących udział w losowaniu oraz rozmiar parlamentu</strong></legend>";
 						echo "<br>";
 						echo" <label>LICZBA STANÓW:</label><br>";
-						echo"<input type='number' id='liczba_stanow' name='liczba_stanow' placeholder='liczba stanów' required='required' autocomplete='off'/><br><br>"; 
+						echo"<input type='number' id='liczba_stanow' name='liczba_stanow' placeholder='liczba stanów' required='required' min='1' autocomplete='off'/><br><br>"; 
 						echo" <label>ROZMIAR PARLAMENTU:</label><br>";
-						echo"<input type='number' id='rozmiar_p' name='rozmiar_p' placeholder='rozmiar parlamentu' required='required' autocomplete='off'/><br><br>";    		
+						echo"<input type='number' id='rozmiar_p' name='rozmiar_p' placeholder='rozmiar parlamentu' required='required' min='1' autocomplete='off'/><br><br>";    		
 						echo"<input type='submit' value='Dalej' id='send1' name='send1' />";
 						echo"<br><br>";
 						echo"</fieldset>";
@@ -90,23 +90,18 @@ function PokazAkapit()
 				
 				echo "<p><a href=\"#\" id=\"link\" onclick=\"PokazAkapit();\">INFORMACJA: FORMAT PLIKU</a></p><br>"; //ukrywanie działania algorytmu
 				echo "<div id='more' style='display:none;'>";//początek bloku do schowania
-				echo "W pierwszej linii liczba n oznaczająca liczbę stanów,";
-				echo "w drugiej linii n liczb rozdzielonych spacjami bądź tabulatorami,";
-				echo "oznaczających populacje kolejnych stanów. Wszystkie liczby całkowite i mieszczące";
-				echo "się w 32-bitowym typie bez znaku, zapisane w systemie dziesiętnym.";
+				echo "W pierwszej linii dwie liczby: n oraz h rozdzielone spacją bądź tabulatorem. ";
+				echo "Liczba n oznacza liczbę stanów, a h rozmiar parlamentu. ";
+				echo "W drugiej linii n liczb rozdzielonych spacjami bądź tabulatorami, oznaczających populacje kolejnych stanów. ";
+				echo " Wszystkie liczby całkowite i mieszczące się w 32-bitowym typie bez znaku, zapisane w systemie dziesiętnym.";
 					//Separator linii dowolny z trzech sensownych.";
 				//echo "<br><br>";
 				echo "</div>"; //koniec bloku do schowania
 				
 				?>
 					
-						<input type="file" name="plik" id="plik" required='required' accept=".txt" />
-					
-					<br>
-					<br>
-			   
-				<label for='ROZMIAR PARLAMENTU'>ROZMIAR PARLAMENTU:</label><br>
-				<input type='number' id='rozmiar_p' name='rozmiar_p' placeholder='rozmiar parlamentu' required='required' autocomplete='off'/><br><br>
+				<input type="file" name="plik" id="plik" required='required' accept=".txt" />
+				<br><br>
 				<input type='hidden' name="recznie" value="2" />
 				<input type='submit' value='Wczytaj plik' id='send' name='send' />
 				<br>

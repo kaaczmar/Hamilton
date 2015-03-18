@@ -65,17 +65,8 @@
 						$sprawdz= htmlspecialchars(trim($_POST['liczba_stanow']));
 						$rozmiar= htmlspecialchars(trim($_POST['rozmiar_p']));
 						
-						 if ( ($sprawdz < 1) || ($rozmiar <1) ) // obsługa błędu gdy liczba nie spełnia wymogów
-						 
-								{
-
-								  echo "<br><br><p style=\"color:red\">LICZBA STANÓW oraz ROZMIAR PARLAMENTU nie mogą być mniejsze od 1!</p><br><br>";
-								  echo "<p><a href=\"index.php\"><input type='button' value='Wstecz' id='powrot' name='powrot'></a></p>";
-
-								} 
-							else 
-							// jeśli spełnione są warunki wyświetlany jest formularz
-								{			
+						// jeśli spełnione są warunki wyświetlany jest formularz
+											
 				
 									echo "<form action='index-3.php' method='post' id='contactform'>";
 									echo    "<fieldset>";
@@ -86,19 +77,11 @@
 											 for ($zz=0; $zz<$sprawdz; $zz++)
 												{	
 													echo"<tr><td><center>".($zz+1).".</center></td>";
-													if ( $wczytaj_form == 1 ) // jesli powrót po błędzie z kroku index-2.php -> index-3.php i ponowne wczytanie wartości 
-													{
-														$tmpnazwa = $_POST["nazwa_stanu$zz"];
-														$tmppop = $_POST["populacja$zz"];
-														echo"<td><input type='text' id='nazwa_stanu$zz' name='nazwa_stanu$zz' placeholder='nazwa stanu ".($zz+1)."' required='required' autocomplete='off' value='$tmpnazwa'/></td>";		 
-														echo"<td><input type='number' id='populacja$zz' name='populacja$zz' placeholder='populacja stanu ".($zz+1)."' required='required' autocomplete='off' value='$tmppop'/></td></tr>";
-													}
-													else // normalne wyświetlenie pustego formularza
-													{
-														echo"<td><input type='text' id='nazwa_stanu$zz' name='nazwa_stanu$zz' placeholder='nazwa stanu ".($zz+1)."' required='required' autocomplete='off' /></td>";		 
-														echo"<td><input type='number' id='populacja$zz' name='populacja$zz' placeholder='populacja stanu ".($zz+1)."' required='required' autocomplete='off'/></td></tr>";
+													
+														echo"<td><input type='text' id='nazwa_stanu$zz' name='nazwa_stanu$zz'  placeholder='nazwa stanu ".($zz+1)."' required='required' autocomplete='off' /></td>";		 
+														echo"<td><input type='number' id='populacja$zz' name='populacja$zz' min='1' placeholder='populacja stanu ".($zz+1)."' required='required' autocomplete='off'/></td></tr>";
 														
-													}
+													
 												}
 									echo "</table>";
 									echo"<br>";
@@ -111,7 +94,7 @@
 									echo"</fieldset>";
 									echo"</form>";
 						
-								}
+								
 						/////////////////////////////////////////////////////////////////////////////////////////
 						
 						}

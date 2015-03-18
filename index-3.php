@@ -110,39 +110,9 @@ function PokazAkapit()
 										$tablica_SQ[$zz] = 0;														//tablica kwot standardowych
 										$tablica_stan_flaga[$zz] = 0;                                               //ustawienie flag przydziału pozostałych miejsc
 										$populacja_kraju = $populacja_kraju + $tablica_populacja[$zz];              //wyliczenie populacji kraju (suma populacji stanów)
-										if( $tablica_populacja[$zz] < 1)
-											{
-												$error = "tak";
-												 echo "<center><p style=\"color:red\">POPULACJA STANU ".($zz+1)." nie może być mniejsza od 1!</p><br>";
-											}
+										
 									}
-									if ($error == "tak") 
-									   {
-										//echo "<br><p><a href=\"index-2.php\"><input type='button' value='Wstecz' id='powrot' name='powrot'></a></p>";
-										
-										echo "<form action='index-2.php' method='post' id='contactform'>";
-										
-																			
-												 for ($za=0; $za<$ILE; $za++)
-													{	
-																						
-														echo"<input type='hidden' name='nazwa_stanu$za' value='$tablica_nazwa[$za]'/></td>";		 
-														echo"<input type='hidden' name='populacja$za' value='$tablica_populacja[$za]'/></td></tr>";
-													}
-										
-										echo"<br>";
-													
-										echo"<input type='hidden' name='liczba_stanow' value='$ILE' />";
-										echo"<input type='hidden' name='rozmiar_p' value='$rozmiar_parlamentu' />"; 
-										echo"<input type='submit' value='Wstecz' id='send' name='send' />";
-										echo"</form></center>";
-										
-										
-										
-										
-										
-										
-									   }
+									
 								
 							
 							} //koniec if test plik == 1
@@ -153,13 +123,6 @@ function PokazAkapit()
 							{
 							
 								$populacja_kraju=0;
-								
-								$rozmiar_parlamentu= htmlspecialchars(trim($_POST['rozmiar_p']));
-								if($rozmiar_parlamentu < 1)
-										{
-											$error = "tak";
-											 echo "<center><p style=\"color:red\">ROZMIAR PARLAMENTU nie może być mniejszy od 1!</p><br>";
-										}
 								
 								$plik_tmp = $_FILES['plik']['tmp_name'];
 								
@@ -172,15 +135,15 @@ function PokazAkapit()
 										{
 											if( $ii == 0) 
 												{
-													$l_stan=explode(" ",$dane[$ii]);
-													$ILE = $l_stan[0];
+													//$l_stan=explode(" ",$dane[$ii]);
+													$temp = preg_split('/\s+/',$dane[$ii]); //liczba stanów rozmiar parlamentu
 													
-													if($ILE < 1)
-													{
-														$error = "tak";
-														 echo "<p style=\"color:red\">LICZBA STANÓW nie może być mniejsza od 1!</p><br>";
-													}
+													$rozmiar_parlamentu=trim($temp[1]);
+													$ILE = trim($temp[0]);
 													
+													if( $rozmiar_parlamentu < 1) { $error = "tak"; echo "<p style=\"color:red\">ROZMIAR PARLAMENTU nie może być mniejszy od 1!</p><br>";}
+													if( $ILE < 1)                { $error = "tak"; echo "<p style=\"color:red\">LICZBA STANÓW nie może być mniejsza od 1!</p><br>";}
+												
 												}
 											
 																							
@@ -291,7 +254,7 @@ function PokazAkapit()
 					
 					//////////////////////////////////////////////////////////////////////////////////////////////////
 					echo "<font size=\"5\">KROK CZWARTY:</font><br>";
-					echo "Jeśli pozostały nieprzydzielone miejsca to przydziel je kolejno stanom o największej części ułamkowej SQ<br><br>";
+					echo "Jeśli pozostały nieprzydzielone miejsca to przydziel je kolejno stanom o największej części ułamkowej SQ<br>";
 					
 					//////////////////////////////////////////////////////////////////////////
 					// OBLICZENIE ILE MIEJSC PRZYDZIELONO
