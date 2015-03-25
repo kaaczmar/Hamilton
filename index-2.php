@@ -1,4 +1,19 @@
-﻿<!DOCTYPE HTML> 
+﻿<?php
+/**
+ * PROBLEM PRZYDZIALU MIEJSC W PARLEMENCIE METODA HAMILTONA
+ *
+ *<p>WPROWADZANIE INSTANCJI PROBLEMU ZA POSREDNICTWEM FORMULARZA</p>
+ * 
+ * @author      Patryk Kaczmarek & Szymon Marcinkowski
+ * @copyright   Metody Optymalizacji 2015
+ * @link        http://www.kaaczmar.pl/hamilton
+ * @package		HAMILTON
+ */
+ 
+?>
+
+
+<!DOCTYPE HTML> 
 <html lang="pl">
 <head>
 	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">

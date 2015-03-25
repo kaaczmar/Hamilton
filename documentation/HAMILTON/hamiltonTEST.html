@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class hamiltonTEST</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> hamiltonTEST</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_test.php.html">/test.php</a> (line <span class="field">15</span>)
+		</p>
+		
+				
+		<pre>PHPUnit_Framework_TestCase
+   |
+   --hamiltonTEST</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#testbrakuje" title="details" class="method-name">testbrakuje</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#testobliczSD" title="details" class="method-name">testobliczSD</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#testobliczSQ" title="details" class="method-name">testobliczSQ</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#testobliczSQ_floor" title="details" class="method-name">testobliczSQ_floor</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#testprzydziel_brakujace_miejsca" title="details" class="method-name">testprzydziel_brakujace_miejsca</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#testwczytywanie" title="details" class="method-name">testwczytywanie</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodtestbrakuje" id="testbrakuje"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">testbrakuje</span> (line <span class="line-number">178</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p>Funkcja testujaca poprawnosc wyliczenia brakujacej liczby miejsc   <div class="src-code"><ol><li><div class="src-line"><span class="src-id">KOD&nbsp;FUNKCJI</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../HAMILTON/Parlament.html">Parlament</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">18</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">22</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">26</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">17</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">20</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">rozmiar_parlamentu_c&nbsp;</span>=&nbsp;<span class="src-num">105</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">liczba_stanow_c&nbsp;</span>=&nbsp;<span class="src-num">5</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$testbrakuje&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">brakuje</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">2</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testbrakuje</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			testbrakuje
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtestobliczSD" id="testobliczSD"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">testobliczSD</span> (line <span class="line-number">29</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p>Funkcja testujaca poprawnosc wyliczenia DZIELNIKA STANDARDOWEGO SD   <div class="src-code"><ol><li><div class="src-line"><span class="src-id">KOD&nbsp;FUNKCJI</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../HAMILTON/Parlament.html">Parlament</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSD</span><span class="src-sym">(</span><span class="src-num">602700</span><span class="src-sym">,</span><span class="src-num">105</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSD&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">SD_c</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">5740</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSD</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			testobliczSD
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtestobliczSQ" id="testobliczSQ"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">testobliczSQ</span> (line <span class="line-number">65</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p>Funkcja testujaca poprawnosc wyliczenia KWOTY STANDARDOWEJ SQi   <div class="src-code"><ol><li><div class="src-line"><span class="src-id">KOD&nbsp;FUNKCJI</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">SD_c&nbsp;</span>=&nbsp;<span class="src-num">5740</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ</span><span class="src-sym">(</span><span class="src-num">105350</span><span class="src-sym">,</span><span class="src-num">0</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ</span><span class="src-sym">(</span><span class="src-num">128500</span><span class="src-sym">,</span><span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ</span><span class="src-sym">(</span><span class="src-num">153120</span><span class="src-sym">,</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ</span><span class="src-sym">(</span><span class="src-num">98530</span><span class="src-sym">,</span><span class="src-num">3</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ</span><span class="src-sym">(</span><span class="src-num">117200</span><span class="src-sym">,</span><span class="src-num">4</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_0&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_1&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_2&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_3&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_4&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">18.35</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_0</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">22.39</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">26.68</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_2</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">17.17</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_3</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">20.42</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_4</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			testobliczSQ
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtestobliczSQ_floor" id="testobliczSQ_floor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">testobliczSQ_floor</span> (line <span class="line-number">124</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p>Funkcja testujaca poprawnosc wyliczenia zaokraglenia KWOTY STANDARDOWEJ SQi FLOOR   <div class="src-code"><ol><li><div class="src-line"><span class="src-id">KOD&nbsp;FUNKCJI</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../HAMILTON/Parlament.html">Parlament</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">SD_c&nbsp;</span>=&nbsp;<span class="src-num">5740</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">105350</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">128500</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">153120</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">98530</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">117200</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ_floor</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ_floor</span><span class="src-sym">(</span><span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ_floor</span><span class="src-sym">(</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ_floor</span><span class="src-sym">(</span><span class="src-num">3</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">obliczSQ_floor</span><span class="src-sym">(</span><span class="src-num">4</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_floor_0&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_floor_1&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_floor_2&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_floor_3&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$testSQ_floor_4&nbsp;</span>=&nbsp;<span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">18</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_floor_0</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">22</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_floor_1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">26</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_floor_2</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">17</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_floor_3</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">20</span><span class="src-sym">,&nbsp;</span><span class="src-var">$testSQ_floor_4</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			testobliczSQ_floor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtestprzydziel_brakujace_miejsca" id="testprzydziel_brakujace_miejsca"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">testprzydziel_brakujace_miejsca</span> (line <span class="line-number">245</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p>Funkcja testujaca poprawnosc przydzielania miejsc poszczegolnym stanom w parlamencie  <div class="src-code"><ol><li><div class="src-line"><span class="src-id">KOD&nbsp;FUNKCJI</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../HAMILTON/Parlament.html">Parlament</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">18</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">22</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">26</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">17</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">20</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">18.35</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">22.39</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">26.68</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">17.17</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQ</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">20.42</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">18</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">22</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">26</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">17</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_SQfloor</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">20</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan_flaga</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan_flaga</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan_flaga</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan_flaga</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan_flaga</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">rozmiar_parlamentu_c&nbsp;</span>=&nbsp;<span class="src-num">105</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">liczba_stanow_c&nbsp;</span>=&nbsp;<span class="src-num">5</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$brakuje&nbsp;</span>=&nbsp;<span class="src-num">2</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">przydziel_brakujace_miejsca</span><span class="src-sym">(</span><span class="src-var">$brakuje</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">18</span><span class="src-sym">,&nbsp;</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">22</span><span class="src-sym">,&nbsp;</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">27</span><span class="src-sym">,&nbsp;</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">17</span><span class="src-sym">,&nbsp;</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">21</span><span class="src-sym">,&nbsp;</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_stan</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			testprzydziel_brakujace_miejsca
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtestwczytywanie" id="testwczytywanie"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">testwczytywanie</span> (line <span class="line-number">317</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p>Funkcja testujaca poprawnosc wczytywania instancji problemu z pliku (NALEZY NAJPIERW USTAWIC SCIEZKE DO PLIKU !!)   <div class="src-code"><ol><li><div class="src-line"><span class="src-id">KOD&nbsp;FUNKCJI</span></div></li>
+<li><div class="src-line"><span class="src-var">$obiekt&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../HAMILTON/Parlament.html">Parlament</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$error&nbsp;</span>=&nbsp;<span class="src-str">&quot;brak&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-id">ustawic&nbsp;sciezke&nbsp;</span>do&nbsp;<span class="src-id">pliku&nbsp;</span><span class="src-sym">!!!!</span></div></li>
+<li><div class="src-line"><span class="src-var">$dane</span>=<a href="http://www.php.net/file">file</a><span class="src-sym">(</span><span class="src-str">&quot;C:/xampp/htdocs/phpunit_example/tests/program.txt&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">wczytywanie</span><span class="src-sym">(</span><span class="src-var">$error</span><span class="src-sym">,</span><span class="src-num">2</span><span class="src-sym">,</span><span class="src-var">$dane</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">105350</span><span class="src-sym">,</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">128500</span><span class="src-sym">,</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">153120</span><span class="src-sym">,</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">98530</span><span class="src-sym">,</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">117200</span><span class="src-sym">,</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">tablica_populacja</span><span class="src-sym">[</span><span class="src-num">4</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">105</span><span class="src-sym">,</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">rozmiar_parlamentu_c</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">assertEquals</span><span class="src-sym">(</span><span class="src-num">5</span><span class="src-sym">,</span><span class="src-var">$obiekt</span><span class="src-sym">-&gt;</span><span class="src-id">liczba_stanow_c</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			testwczytywanie
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 25 Mar 2015 22:59:16 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

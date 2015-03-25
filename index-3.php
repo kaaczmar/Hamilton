@@ -1,4 +1,21 @@
-﻿<!DOCTYPE HTML> 
+﻿<?php
+/**
+ * PROBLEM PRZYDZIALU MIEJSC W PARLEMENCIE METODA HAMILTONA
+ 
+ * @author      Patryk Kaczmarek & Szymon Marcinkowski
+ * @copyright   Metody Optymalizacji 2015
+ * @link        http://www.kaaczmar.pl/hamilton
+ * @package		HAMILTON
+ */
+ 
+ 
+require ("Parlament.php");
+ 
+ $parlament = new Parlament;
+
+ ?>
+
+<!DOCTYPE HTML> 
 <html lang="pl">
 <head>
 	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
@@ -79,117 +96,29 @@ function PokazAkapit()
 		</center>
 				<?php
 				
-				$error = "brak";
 				
+				
+				$error = "brak";
 				
 				if ( isset($_POST["send"]) ) 
 					{		
-															
-						//ustawienie flagi wczytywania z formularza czy zczytywania z pliku
-						$test_plik= htmlspecialchars(trim($_POST['recznie']));
-							
-						/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-						// jeśli "1" wczytywanie z formularza					
-						if($test_plik == 1)
-							{
-							
-								//pobranie liczby stanów biorących udział w przydziale
-								$ILE= htmlspecialchars(trim($_POST['lstan']));
-
-								//pobranie rozmiaru parlamentu
-								$rozmiar_parlamentu= htmlspecialchars(trim($_POST['rozmiar_p']));					
-
-								$populacja_kraju=0; //populacja stanu
-
-								//wczytanie zmiennych ( nazwa stanu, liczba populacji) z formularza
-								for($zz=0; $zz<$ILE; $zz++)
-									{
-										$tablica_nazwa[$zz] = htmlspecialchars(trim($_POST["nazwa_stanu$zz"]));     //nazwy stanów
-										$tablica_populacja[$zz] = htmlspecialchars(trim($_POST["populacja$zz"]));   //liczba populacji
-										$tablica_stan[$zz] = 0;														//zerowanie tablicy przydziału miejsc
-										$tablica_SQ[$zz] = 0;														//tablica kwot standardowych
-										$tablica_stan_flaga[$zz] = 0;                                               //ustawienie flag przydziału pozostałych miejsc
-										$populacja_kraju = $populacja_kraju + $tablica_populacja[$zz];              //wyliczenie populacji kraju (suma populacji stanów)
-										
-									}
-									
-								
-							
-							} //koniec if test plik == 1
-							
-						//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-						//jeśli "0" wczytywanie programu z pliku
-						if($test_plik == 2)
-							{
-							
-								$populacja_kraju=0;
-								
-								$plik_tmp = $_FILES['plik']['tmp_name'];
-								
-								$dane=file($plik_tmp);
-									
-								//echo "dane = $plik_tmp<br>";
-								
-									$as=0;
-									for ($ii=0;$ii<count($dane);$ii++)
-										{
-											if( $ii == 0) 
-												{
-													//$l_stan=explode(" ",$dane[$ii]);
-													$temp = preg_split('/\s+/',$dane[$ii]); //liczba stanów rozmiar parlamentu
-													
-													$rozmiar_parlamentu=trim($temp[1]);
-													$ILE = trim($temp[0]);
-													
-													if( $rozmiar_parlamentu < 1) { $error = "tak"; echo "<p style=\"color:red\">ROZMIAR PARLAMENTU nie może być mniejszy od 1!</p><br>";}
-													if( $ILE < 1)                { $error = "tak"; echo "<p style=\"color:red\">LICZBA STANÓW nie może być mniejsza od 1!</p><br>";}
-												
-												}
-											
-																							
-											if( $ii > 0)
-												{
-
-
-												  // $temp=explode(" ",$dane[$ii]);
-												$temp = preg_split('/\s+/',$dane[$ii]); //wczytywanie stanów z pliku ze spacjami i tabulatorami
-																								
-												   for($k=0;$k<count($temp);$k++)
-													   {
-													   
-														$tablica_nazwa[$as] = "STAN ".($as+1)."";  //nazwy stanów
-														$tablica_populacja[$as] = trim($temp[$k]);      //liczba populacji
-														//usuwanie znaku końca lini
-														if($tablica_populacja[$as] == "")
-															{
-																$tablica_populacja[$as] = "NEW";
-																$as--;
-																
-															}
-															else
-															{
-																$tablica_stan[$as] = 0;                  //zerowanie tablicy przydziału miejsc
-																$tablica_stan_flaga[$as] = 0;           //ustawienie flag przydziału pozostałych miejsc
-																$tablica_SQ[$as] = 0;				   //tablica kwot standardowych
-																$populacja_kraju = $populacja_kraju + $tablica_populacja[$as]; //wyliczenie populacji kraju (suma populacji stanów)
-															}	
-														if( $tablica_populacja[$as] < 1)
-															{
-																$error = "tak";
-																 echo "<p style=\"color:red\">POPULACJA STANU ".($as+1)." nie może być mniejsza od 1!</p><br>";
-															}
-											
-													   $as++;
-													   }
-												}
-									   
-									   }
-									   if ($error == "tak") 
-									   {
-										echo "<br><p><a href=\"index.php\"><input type='button' value='Wstecz' id='powrot' name='powrot'></a></p></center>";
-									   }
-								  
-							}
+				//ustawienie flagi wczytywania z formularza czy zczytywania z pliku
+				$RODZAJ= htmlspecialchars(trim($_POST['recznie']));
+						
+				if ($RODZAJ == 1) 
+				{
+					$parlament->wczytywanie($error,$RODZAJ,0);
+				}
+				
+				if ($RODZAJ == 2) 
+				{
+					$plik_tmp = $_FILES['plik']['tmp_name'];
+					$dane=file($plik_tmp);
+					$parlament->wczytywanie($error,$RODZAJ,$dane);
+				}
+				
+				
+				
 					//////////////////////////////////////////////////////////////////////////////
 				
 					if ($error == "brak" )
@@ -205,48 +134,63 @@ function PokazAkapit()
 					
 					//KROK PIERWSZY
 					//Oblicz dzielnik standardowy
-					// SD = populacja kraju / rozmiar parlamentu
+					// SD = populacja kraju / rozmiar parlamentu				
 					
 					echo "<font size=\"5\">KROK PIERWSZY:</font><br>";
 					
 					echo "Oblicz dzielnik standardowy: SD = populacja kraju / rozmiar parlamentu<br>";
 					
-					$SD = round( ($populacja_kraju/$rozmiar_parlamentu),2);
-					echo "SD = $populacja_kraju / $rozmiar_parlamentu<br>";
-					echo "<p style=\"color:red\"> <font size=\"5\"> SD = $SD</font></p><br>";
+					
+					
+					
+					$parlament->obliczSD($parlament->populacja_kraju_c,$parlament->rozmiar_parlamentu_c);	
+
+
+
+					
+					
+					echo "SD = $parlament->populacja_kraju_c / $parlament->rozmiar_parlamentu_c<br>";
+					echo "<p style=\"color:red\"> <font size=\"5\"> SD = $parlament->SD_c</font></p><br>";
+					
+					
 					//////////////////////////////////////////////////////////////////////////////////////////////////
+					
+					
+					
 					echo "<font size=\"5\">KROK DRUGI:</font><br>";
 					echo "Oblicz kwoty standardowe dla każdego stanu: SQi = populacja stanu i / SD<br><br>";
-					
-					echo "<table><tr><td>Lp.</td><td>Nazwa stanu</td><td>Kwota Standardowa SQ</td></tr>";
-					for($i=0; $i<$ILE; $i++)
-						{
-							$tablica_SQ[$i] = round(($tablica_populacja[$i]/$SD),2,PHP_ROUND_HALF_UP);
-							
-							echo"<tr><td><center>".($i+1).".</center></td>";
-							echo"<td>$tablica_nazwa[$i]</td>";		 
-							echo"<td style=\"color:red\"><font size=\"5\">$tablica_SQ[$i]</font></td></tr>";
+					echo "<table><tr><td style=\"color:white\">Lp.</td><td style=\"color:white\">Nazwa stanu</td><td style=\"color:white\">Kwota Standardowa SQ</td></tr>";
+						for($i=0; $i< $parlament->liczba_stanow_c ; $i++)
+							{
+								$parlament->ObliczSQ($parlament->tablica_populacja[$i],$i);
 								
-					
+								echo"<tr><td style=\"color:white\"><center>".($i+1).".</center></td>";
+								echo"<td style=\"color:white\">".$parlament->tablica_nazwa[$i]."</td>";		 
+								echo"<td style=\"color:red\"><font size=\"5\">".$parlament->tablica_SQ[$i]."</font></td></tr>";
+									
+						
 
-						}
+							}
 					echo "</table><br>";
+					
 					
 					//////////////////////////////////////////////////////////////////////////////////////////////////
 					echo "<font size=\"5\">KROK TRZECI:</font><br>";
 					echo "Początkowo przydziel stanowi jego dolną kwotę [SQi floor]<br><br>";
 					
-					echo "<table><tr><td>Lp.</td><td>Nazwa stanu</td><td>Kwota Standardowa SQ</td><td>SQ floor</td></tr>";
-					$tablica_SQfloor[0]=0;
-					for($i=0; $i<$ILE; $i++)
+					echo "<table><tr style=\"color:white\"><td>Lp.</td><td>Nazwa stanu</td><td>Kwota Standardowa SQ</td><td>SQ floor</td></tr>";
+					
+					$parlament->tablica_SQfloor[0]=0;
+					
+					for($i=0; $i<$parlament->liczba_stanow_c; $i++)
 						{
-							$tablica_stan[$i] = floor(($tablica_populacja[$i]/$SD));
-							$tablica_SQfloor[$i] = $tablica_stan[$i];
+														
+							$parlament->obliczSQ_floor($i);
 							
-							echo"<tr><td><center>".($i+1).".</center></td>";
-							echo"<td>$tablica_nazwa[$i]</td>";		 
-							echo"<td>$tablica_SQ[$i]</td>";
-							echo"<td style=\"color:red\"><font size=\"5\">$tablica_stan[$i]</font></td></tr>";				
+							echo"<tr><td style=\"color:white\"><center>".($i+1).".</center></td>";
+							echo"<td style=\"color:white\">".$parlament->tablica_nazwa[$i]."</td>";		 
+							echo"<td style=\"color:white\">".$parlament->tablica_SQ[$i]."</td>";
+							echo"<td style=\"color:red\"><font size=\"5\">".$parlament->tablica_stan[$i]."</font></td></tr>";				
 					
 
 						}
@@ -258,64 +202,37 @@ function PokazAkapit()
 					
 					//////////////////////////////////////////////////////////////////////////
 					// OBLICZENIE ILE MIEJSC PRZYDZIELONO
-					$suma = 0; // suma potrzebna do obliczenia ile miejsc przydzielono
-					for($i=0; $i<$ILE; $i++)
-						{
-							$suma= $suma + $tablica_stan[$i];
-						}
-					echo "<font size=\"4\">Rozmiar parlamentu  : </font><font size=\"5\" color=\"red\">$rozmiar_parlamentu</font><br>";	
+					$brakuje = $parlament->brakuje();
+					$suma = $parlament->rozmiar_parlamentu_c - $brakuje;
+					
+					echo "<font size=\"4\">Rozmiar parlamentu  : </font><font size=\"5\" color=\"red\">$parlament->rozmiar_parlamentu_c</font><br>";
+					
 					echo "<font size=\"4\">Przydzielolno miejsc: </font><font size=\"5\" color=\"red\">$suma</font><br>";
-					$brakuje = $rozmiar_parlamentu - $suma;
+					
 					echo "<font size=\"4\">BRAKUJE             : </font><font size=\"5\" color=\"red\">$brakuje</font><br><br>";
 					
 					
 				
 				////////////////////////////////////////////////////////////////////////
 				/////WYSZUKIWANIE STANU O NAJWIĘKSZEJ CZĘŚCI UŁAMKOWEJ, PRZYDZIELENIE MU MIEJSCA I OZNACZENIE FLAGĄ PRZYDZIELONE
-					$max=0; //zmienna pomocnicza
-					$stan_ID=0; //zmienna pomocnicza
-					//////////////////////////////////////////////////////
-					for($i=0; $i<$ILE; $i++)
-							{
-								$wynik_reszta[$i] =  round( ($tablica_SQ[$i] - $tablica_SQfloor[$i]),2);
-							}
 					
-
-					for($a=0; $a<$brakuje; $a++)
-						{
-
-							for($b=0; $b<$ILE; $b++)
-							{
-								if ($tablica_stan_flaga[$b] == 0) //jeśli stan nie ma przypisanego juz miejsca to bierzemy go pod uwagę
-								{
-									
-									if( ($a == 0) && ($b == 0)) {$max=$wynik_reszta[$b]; $stan_ID=$b;} //pierwszy stan jako największa reszta
-									else
-									{
-										if ($max < $wynik_reszta[$b]) {$max=$wynik_reszta[$b]; $stan_ID=$b;} //porównywanie reszt kolejnych stanów
-									}
-									
-
-								}
-							}
-							$tablica_stan_flaga[$stan_ID]=1; // oznaczamy stan flagą i nie jest już brany pod uwagę w kolejnej iteracji
-							$tablica_stan[$stan_ID]=$tablica_stan[$stan_ID]+1; // przypisanie stanowi dodatkowego miejsca
-							$max=0;
-							
-						}
+					$parlament->przydziel_brakujace_miejsca($brakuje);
+					
+					
+					
 					//wyświetlenie ostatniego kroku algorytmu
-					echo "<table><tr><td>Lp.</td><td>Nazwa stanu</td><td>Kwota Standardowa SQ</td><td>SQ floor</td><td>część ułamkowa SQ</td><td>Przydzielone miejsca</td></tr>";
+					echo "<table><tr style=\"color:white\"><td>Lp.</td><td>Nazwa stanu</td><td>Kwota Standardowa SQ</td><td>SQ floor</td><td>część ułamkowa SQ</td><td>Przydzielone miejsca</td></tr>";
 					
-						for($i=0; $i<$ILE; $i++)
+						for($i=0; $i< $parlament->liczba_stanow_c ; $i++)
 							{
-								$wynik_reszta[$i] = round( ($tablica_SQ[$i] - $tablica_SQfloor[$i]),2);
+								$parlament->wynik_reszta[$i] = round( ($parlament->tablica_SQ[$i] - $parlament->tablica_SQfloor[$i]),2);
 								
-								echo"<tr><td><center>".($i+1).".</center></td>";
-								echo"<td>$tablica_nazwa[$i]</td>";		 
-								echo"<td>$tablica_SQ[$i]</td>";
-								echo"<td>$tablica_SQfloor[$i]</td>";
-								echo"<td style=\"color:red\"><font size=\"5\">$wynik_reszta[$i]</font></td>";	
-								$przydzielonoM = $tablica_stan[$i] - $tablica_SQfloor[$i];
+								echo"<tr><td style=\"color:white\"><center>".($i+1).".</center></td>";
+								echo"<td style=\"color:white\">".$parlament->tablica_nazwa[$i]."</td>";		 
+								echo"<td style=\"color:white\">".$parlament->tablica_SQ[$i]."</td>";
+								echo"<td style=\"color:white\">".$parlament->tablica_SQfloor[$i]."</td>";
+								echo"<td style=\"color:red\"><font size=\"5\">".$parlament->wynik_reszta[$i]."</font></td>";	
+								$przydzielonoM = $parlament->tablica_stan[$i] - $parlament->tablica_SQfloor[$i];
 								echo"<td style=\"color:red\"><font size=\"5\">$przydzielonoM</font></td></tr>";				
 						
 
@@ -332,15 +249,15 @@ function PokazAkapit()
 					////////////////////////////////////////////////
 					
 					
-					echo "<font size=\"5\">Rozmiar parlamentu: $rozmiar_parlamentu</font>";
-					echo "<table><tr><td>Lp.</td><td>Nazwa stanu</td><td>Populacja stanu</td><td>Przydzielone miejsca</td></tr>";
+					echo "<font size=\"5\">Rozmiar parlamentu: ".$parlament->rozmiar_parlamentu_c."</font>";
+					echo "<table><tr style=\"color:white\"><td>Lp.</td><td>Nazwa stanu</td><td>Populacja stanu</td><td>Przydzielone miejsca</td></tr>";
 					
-							 for ($z=0; $z<$ILE; $z++)
+							 for ($z=0; $z<$parlament->liczba_stanow_c; $z++)
 								{	
-									echo"<tr><td><center><font size=\"5\">".($z+1).".</font></center></td>";
-									echo"<td><font size=\"5\">$tablica_nazwa[$z]</font></td>";
-									echo"<td style=\"text-align:right\"><font size=\"5\">$tablica_populacja[$z]</font></td>";									
-									echo"<td style=\"color:red\"><center><font size=\"5\">$tablica_stan[$z]</font></center></td></tr>";
+									echo"<tr style=\"color:white\"><td style=\"color:white\"><center><font size=\"5\">".($z+1).".</font></center></td>";
+									echo"<td style=\"color:white\"><font size=\"5\">".$parlament->tablica_nazwa[$z]."</font></td>";
+									echo"<td style=\"text-align:right\"><font size=\"5\">".$parlament->tablica_populacja[$z]."</font></td>";									
+									echo"<td style=\"color:red\"><center><font size=\"5\">".$parlament->tablica_stan[$z]."</font></center></td></tr>";
 								}
 					echo "</table><br><br>";
 					
@@ -358,9 +275,9 @@ function PokazAkapit()
 						echo "var data = google.visualization.arrayToDataTable([";
 						echo " ['Nazwa Stanu', 'Przydział miejsc'],";
 						  $sciezka_data="";
-						  for($xx=0; $xx<$ILE; $xx++)
+						  for($xx=0; $xx<$parlament->liczba_stanow_c; $xx++)
 							{
-								$sciezka_data=$sciezka_data."['".$tablica_nazwa[$xx]."',".$tablica_stan[$xx]."],";
+								$sciezka_data=$sciezka_data."['".$parlament->tablica_nazwa[$xx]."',".$parlament->tablica_stan[$xx]."],";
 								
 							}
 						echo $sciezka_data;

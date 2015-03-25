@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="phpDocumentor 1.4.4 http://www.phpdoc.org">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		<param name="Local" value="HAMILTON\_index.php.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="index-3.php">
+		<param name="Local" value="HAMILTON\_index-3.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="index.php">
+		<param name="Local" value="HAMILTON\_index.php.html">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="index-2.php">
+		<param name="Local" value="HAMILTON\_index-2.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="index-3.php">
+		<param name="Local" value="HAMILTON\_index-3.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		<param name="Local" value="HAMILTON\Parlament.html">
+		</OBJECT>
+	<UL>
+	
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Parlament">
+		<param name="Local" value="HAMILTON\Parlament.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Parlament Properties">
+		<param name="Local" value="HAMILTON\Parlament.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$populacja_kraju_c">
+		<param name="Local" value="HAMILTON\Parlament.html#var$populacja_kraju_c">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$rozmiar_parlamentu_c">
+		<param name="Local" value="HAMILTON\Parlament.html#var$rozmiar_parlamentu_c">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$SD_c">
+		<param name="Local" value="HAMILTON\Parlament.html#var$SD_c">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_nazwa">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_nazwa">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_populacja">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_populacja">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_SQ">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_SQ">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_SQfloor">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_SQfloor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_stan">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_stan">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_stan_flaga">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_stan_flaga">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$wynik_reszta">
+		<param name="Local" value="HAMILTON\Parlament.html#var$wynik_reszta">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$liczba_stanow_c">
+		<param name="Local" value="HAMILTON\Parlament.html#var$liczba_stanow_c">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$populacja_kraju_c">
+		<param name="Local" value="HAMILTON\Parlament.html#var$populacja_kraju_c">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$rozmiar_parlamentu_c">
+		<param name="Local" value="HAMILTON\Parlament.html#var$rozmiar_parlamentu_c">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$SD_c">
+		<param name="Local" value="HAMILTON\Parlament.html#var$SD_c">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_nazwa">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_nazwa">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_populacja">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_populacja">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_SQ">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_SQ">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_SQfloor">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_SQfloor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_stan">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_stan">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$tablica_stan_flaga">
+		<param name="Local" value="HAMILTON\Parlament.html#var$tablica_stan_flaga">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$wynik_reszta">
+		<param name="Local" value="HAMILTON\Parlament.html#var$wynik_reszta">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Parlament Methods">
+		<param name="Local" value="HAMILTON\Parlament.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="obliczSD">
+		<param name="Local" value="HAMILTON\Parlament.html#methodobliczSD">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="obliczSQ">
+		<param name="Local" value="HAMILTON\Parlament.html#methodobliczSQ">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="obliczSQ_floor">
+		<param name="Local" value="HAMILTON\Parlament.html#methodobliczSQ_floor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="przydziel_brakujace_miejsca">
+		<param name="Local" value="HAMILTON\Parlament.html#methodprzydziel_brakujace_miejsca">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="wczytywanie">
+		<param name="Local" value="HAMILTON\Parlament.html#methodwczytywanie">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="brakuje">
+		<param name="Local" value="HAMILTON\Parlament.html#methodbrakuje">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="obliczSD">
+		<param name="Local" value="HAMILTON\Parlament.html#methodobliczSD">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="obliczSQ">
+		<param name="Local" value="HAMILTON\Parlament.html#methodobliczSQ">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="obliczSQ_floor">
+		<param name="Local" value="HAMILTON\Parlament.html#methodobliczSQ_floor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="przydziel_brakujace_miejsca">
+		<param name="Local" value="HAMILTON\Parlament.html#methodprzydziel_brakujace_miejsca">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="wczytywanie">
+		<param name="Local" value="HAMILTON\Parlament.html#methodwczytywanie">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="index.php">
+		<param name="Local" value="HAMILTON\_index.php.html">
+		</OBJECT>
+		
+</UL>
+</BODY></HTML>

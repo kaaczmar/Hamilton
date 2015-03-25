@@ -1,0 +1,22 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=documentation.chm
+Contents file=contents.hhc
+Default topic=index.html
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=Metoda Hamiltona - Dokumentacja
+
+[FILES]
+HAMILTON\elementindex_HAMILTON.html
+elementindex.html
+blank.html
+classtrees_HAMILTON.html
+HAMILTON\_index-2.php.html
+HAMILTON\Parlament.html
+HAMILTON\_index-3.php.html
+HAMILTON\_index.php.html
+errors.html
+
+[INFOTYPES]

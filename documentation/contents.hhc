@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="phpDocumentor version 1.4.4">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="HAMILTON">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="HAMILTON Alphabetical Index">
+		<param name="Local" value="HAMILTON\elementindex_HAMILTON.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="HAMILTON Class Trees">
+		<param name="Local" value="classtrees_HAMILTON.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="index-2.php">
+		<param name="Local" value="HAMILTON\_index-2.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="index-3.php">
+		<param name="Local" value="HAMILTON\_index-3.php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="index.php">
+		<param name="Local" value="HAMILTON\_index.php.html">
+		</OBJECT>
+		
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Parlament">
+		<param name="ImageNumber" value="1">
+		<param name="Local" value="HAMILTON\Parlament.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL><UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Index">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+		<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Alphabetical Index Of All Elements">
+		<param name="Local" value="elementindex.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Start page">
+		<param name="Local" value="blank.html">
+		</OBJECT>
+		
+</UL>
+</UL>
+</UL>
+</BODY></HTML>
