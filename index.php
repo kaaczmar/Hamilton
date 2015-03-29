@@ -84,9 +84,9 @@ function PokazAkapit()
 						echo"<legend><strong>Podaj ilość stanów biorących udział w losowaniu oraz rozmiar parlamentu</strong></legend>";
 						echo "<br>";
 						echo" <label>LICZBA STANÓW:</label><br>";
-						echo"<input type='number' id='liczba_stanow' name='liczba_stanow' placeholder='liczba stanów' required='required' min='1' autocomplete='off'/><br><br>"; 
+						echo"<input type='number' id='liczba_stanow' name='liczba_stanow' placeholder='liczba stanów' required='required' min='1' max='200' autocomplete='off'/><br><br>"; 
 						echo" <label>ROZMIAR PARLAMENTU:</label><br>";
-						echo"<input type='number' id='rozmiar_p' name='rozmiar_p' placeholder='rozmiar parlamentu' required='required' min='1' autocomplete='off'/><br><br>";    		
+						echo"<input type='number' id='rozmiar_p' name='rozmiar_p' placeholder='rozmiar parlamentu' required='required' min='1' max='600' autocomplete='off'/><br><br>";    		
 						echo"<input type='submit' value='Dalej' id='send1' name='send1' />";
 						echo"<br><br>";
 						echo"</fieldset>";
